@@ -1,14 +1,6 @@
-import Database from 'better-sqlite3'
+let users = [
+  { id: 1, name: "John Doe", email: "john@example.com", age: 25 },
+  { id: 2, name: "Jane Smith", email: "jane@example.com", age: 28 }
+];
 
-const db = new Database("users.db")
-
-db.prepare(`
-    CREATE TABLE IF NOT EXISTS users(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    email TEXT UNIQUE NOT NULL,
-    age INTEGER
-    )
-    `).run();
-
-export default db
+export default users;
